@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/kubernetesassignment-428901/container-1', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest']
 images:
-- 'gcr.io/kubernetesassignment-428901/container-1'
-options:
-  logging: NONE
+- 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repo/container1:latest'
