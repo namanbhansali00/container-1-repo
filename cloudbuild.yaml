@@ -11,6 +11,9 @@ steps:
   - -f
   - ./pvc.yaml
   - --namespace=default
+  env:
+  - 'CLOUDSDK_CONTAINER_CLUSTER=kuberneres-assignment-cluster'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
 images:
 - 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest'
 options:
