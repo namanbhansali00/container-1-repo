@@ -4,4 +4,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest']
 images:
-- 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repo/container1:latest'
+- 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest'
