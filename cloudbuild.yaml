@@ -12,3 +12,5 @@ steps:
   - --cluster=kuberneres-assignment-cluster
 images:
 - 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY
