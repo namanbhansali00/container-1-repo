@@ -3,7 +3,7 @@ import os
 
 app = Flask(__name__)
 
-PERSISTENT_VOLUME_PATH = "/Naman_PV_daair"
+PERSISTENT_VOLUME_PATH = "/Naman_PV_dir"
 
 @app.route('/store-file', methods=['POST'])
 def store_file():
