@@ -3,6 +3,17 @@ steps:
   args: ['build', '-t', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest']
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=./k8s/service-deployment.yaml,./k8s/pvc.yaml
+  - --image=${_IMAGE_NAME}:$SHORT_SHA
+  - --location=${_CLUSTER_LOCATION}
+  - --cluster=${_CLUSTER_NAME}
+  substitutions:
+  _IMAGE_NAME: 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1'
+  _CLUSTER_LOCATION: 'us-central1'
+  _CLUSTER_NAME: 'kuberneres-assignment-cluster'
 images:
 - 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest'
 options:
