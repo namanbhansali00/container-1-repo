@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/kubernetesassignment-428818/container-1', '.']
+  args: ['build', '-t', 'gcr.io/kubernetesassignment-428901/container-1', '.']
 images:
-- 'gcr.io/kubernetesassignment-428818/container-1'
+- 'gcr.io/kubernetesassignment-428901/container-1'
 options:
   logging: NONE
