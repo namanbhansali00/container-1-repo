@@ -109,7 +109,7 @@ def store_file():
     # 2.2 Send success response if there was no exception during creating/storing the file.
     return {
         "file": request.json["file"],
-        "message": "Success."
+        "message": "Success. Change made for showing"
     }
 
 
