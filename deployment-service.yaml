@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: container-1
-        image: us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1
+        image: us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest
         ports:
         - containerPort: 8080
         volumeMounts:
