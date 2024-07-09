@@ -6,7 +6,8 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=deployment-service.yaml,pvc.yaml
+  - --filename=deployment-service.yaml
+  - --filename=pvc.yaml
   - --image=us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1
   - --location=us-central1
   - --cluster=kuberneres-assignment-cluster
