@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/kubernetesassignment-428922/kubernetes-assignment-repo/container1:latest', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest']
+  args: ['push', 'us-central1-docker.pkg.dev/kubernetesassignment-428922/kubernetes-assignment-repo/container1:latest']
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
   - apply
@@ -12,9 +12,9 @@ steps:
   - ./pvc.yaml
   - --namespace=default
   env:
-  - 'CLOUDSDK_CONTAINER_CLUSTER=kuberneres-assignment-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=primary-cluster'
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
 images:
-- 'us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest'
+- 'us-central1-docker.pkg.dev/kubernetesassignment-428922/kubernetes-assignment-repo/container1:latest'
 options:
   logging: CLOUD_LOGGING_ONLY
