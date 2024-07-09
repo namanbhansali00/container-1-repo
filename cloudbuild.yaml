@@ -8,7 +8,7 @@ steps:
   - run
   - --filename=deployment-service.yaml
   - --filename=pvc.yaml
-  - --image=us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1
+  - --image=us-central1-docker.pkg.dev/kubernetesassignment-428915/kubernetes-assignment-repo/container1:latest
   - --location=us-central1
   - --cluster=kuberneres-assignment-cluster
 images:
